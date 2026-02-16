@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 })
 
 app.post("/search", async (req, res) => {
-    const pokemonName = req.body.name;
+    const pokemonName = req.body.name.toLowerCase();
     
     try {
         const response = await axios.get(API_URL + pokemonName);
@@ -33,7 +33,7 @@ app.post("/search", async (req, res) => {
             }))
     };
         console.log(pokemonData);
-        res.render("index.ejs", pokemonData);
+        res.render("data.ejs", pokemonData);
     } catch (error) {
         if (error.response) {
             // API ngasih response error (ex: 404 pokemon ga ada)

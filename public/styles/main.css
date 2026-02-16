@@ -1,0 +1,118 @@
+* {
+    font-family: 'Press Start 2P';
+    color: rgb(243, 244, 244);
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(243, 244, 244);
+    background-color: rgb(6, 30, 41);
+}
+.search-title {
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+.content {
+  background-color:rgb(29, 84, 109);
+  padding: 50px;
+  border-radius: 15px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-input {
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.5rem;
+    width: 100%;
+    border-radius: 5px;
+    border-style: none;
+    padding: 5px;
+    color: black;
+    text-align: center;
+}
+
+.text-input::placeholder {
+    text-align: center;
+}
+
+form .submit {
+    border-radius: 5px;
+    border-style: none;
+    padding: 15px;
+    font-size: medium;
+    margin-top: 15px;
+    background-color: rgb(95, 149, 152);
+
+}
+
+.pokemon-title {
+    text-align: center;
+}
+.pokemon-image {
+    width: 100px;
+    align-self: center;
+}
+.description {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+.description-value {
+    text-align: center;
+}
+
+.stat {
+    width: 300px;
+    margin-left: 100px;
+    margin-bottom: 2px;
+    font-size: .6rem;
+}
+.stats {
+    background-color: rgba(0, 0, 0, 0.301);
+    width: 300px;
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+.stats * {
+    font-size: .6rem;
+}
+.content-data {
+  background-color:rgb(29, 84, 109);
+  padding: 50px;
+  padding-bottom: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 300px;
+}
+
+.text-input {
+    height: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+.ghost {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 5px;
+  color: rgba(0, 0, 0, 0.50);
+  pointer-events: none;
+  z-index: 3;
+  font-family: inherit;
+}

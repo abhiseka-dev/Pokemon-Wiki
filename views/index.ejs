@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokeWiki</title>
-</head>
-<body>
+<%-  include("partials/header.ejs") %>
+<div class="content">
+    <h1 class="search-title">Search Your Pokemon!</h1>
     <form action="/search" method="POST">
-        <label for="PokemonName">Pokemon Name</label>
-        <input type="text" name="name" id="PokemonName">
-        <input type="submit" name="" id="">
+        <div class="input-wrapper">
+            <span class="ghost"></span>
+            <input type="text" name="name" id="PokemonName" placeholder="Pokemon Name Here!" class="text-input">
+        </div>
+        <% if (locals.error) {%>
+            <p><%= error %></p>
+            <% } %>
+        <input type="submit" name="" id="" value="Search!" class="submit">
     </form>
-</body>
-</html>
+</div>
+<%-  include("partials/footer.ejs") %>

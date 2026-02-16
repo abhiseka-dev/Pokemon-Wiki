@@ -1,0 +1,55 @@
+<%-  include("partials/header.ejs") %>
+<div class="content-data">
+   <h1 class="pokemon-title"> <%= name %></h1>
+   <img class="pokemon-image" src="<%= imageUrl %>" alt="">
+   <div class="description">
+    <div>
+        <p>Pokedex ID</p>
+        <p>Name</p>
+        <p>Height</p>
+        <p>Weight</p>
+        <p>Type</p>
+    </div>
+    <div>
+        <p>:</p>
+        <p>:</p>
+        <p>:</p>
+        <p>:</p>
+        <p>:</p>
+    </div>
+    <div class="description-value">
+        <p> <%= id %></p>
+        <p><%= name %></p>
+        <p><%= height %>m</p>
+        <p><%= weight %>kg</p>
+        <% types.forEach(type => { %>
+            <p><%= type %></p>
+        <% }) %>
+
+    </div>
+   </div>
+   <p class="stat">stats     :</p>
+   <div class="stats">
+    <div class="stats-name">
+        <% stats.forEach(stat => { %>
+    <p><%= stat.name %></p>
+  <% }) %>
+    </div>
+    <div class="stats-:">
+<% stats.forEach(stat => { %>
+    <p>:</p>
+  <% }) %>
+    </div>
+    <div class="stats-value">
+       <% stats.forEach(stat => { %>
+    <p>
+      <%= stat.value %>
+    </p>
+  <% }) %>
+    </div>
+   </div>
+   <form action="/" method="GET">
+    <input type="submit" value="Back" class="submit">
+   </form>
+</div>
+<%-  include("partials/footer.ejs") %>
